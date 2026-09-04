@@ -6,7 +6,7 @@ interface WaveDividerProps {
 
 export default function WaveDivider({
   className = "",
-  fill = "#F4F1EA",
+  fill = "#E7F1EE",
   flip = false,
 }: WaveDividerProps) {
   return (

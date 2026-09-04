@@ -24,10 +24,10 @@ export default function ImageReveal({
       <motion.div
         data-reveal
         className="absolute inset-0"
-        initial={reduce ? false : { clipPath: "inset(0 0 100% 0)", scale: 1.12 }}
-        whileInView={{ clipPath: "inset(0 0 0% 0)", scale: 1 }}
-        viewport={{ once: true, amount: 0.35 }}
-        transition={{ duration: reduce ? 0 : 1.2, ease: easePremium }}
+        initial={reduce ? false : { opacity: 0, scale: 1.04 }}
+        whileInView={{ opacity: 1, scale: 1 }}
+        viewport={{ once: true, amount: 0.2 }}
+        transition={{ duration: reduce ? 0 : 0.8, ease: easePremium }}
       >
         <Image
           src={src}
@@ -35,9 +35,9 @@ export default function ImageReveal({
           fill
           sizes={sizes}
           priority={priority}
-          className="object-cover grayscale-[35%] transition duration-700 hover:grayscale-0"
+          className="object-cover"
         />
-        <div className="pointer-events-none absolute inset-0 bg-gradient-to-tr from-teal/30 via-transparent to-signal/20" />
+        <div className="pointer-events-none absolute inset-0 bg-gradient-to-tr from-teal/20 via-transparent to-signal/10" />
       </motion.div>
     </div>
   );

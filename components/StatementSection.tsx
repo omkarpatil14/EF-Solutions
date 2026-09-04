@@ -9,7 +9,7 @@ export default function StatementSection() {
   const reduce = useReducedMotion();
 
   return (
-    <section className="relative overflow-hidden bg-void py-32 md:py-44">
+    <section className="relative overflow-hidden bg-void py-16 md:py-44">
       <div className="container-site">
         <p className="display">
           {words.map((w, i) => (

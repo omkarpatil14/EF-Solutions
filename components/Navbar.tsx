@@ -38,7 +38,7 @@ export default function Navbar() {
 
   return (
     <>
-      <header className="fixed inset-x-0 top-0 z-50">
+      <header className={`fixed inset-x-0 top-0 ${open ? "z-[80]" : "z-50"}`}>
         <div
           className={`border-b transition-[background-color,border-color,backdrop-filter] duration-500 ${
             solid
@@ -56,7 +56,7 @@ export default function Navbar() {
                 className="h-9 w-9 rounded-full object-cover"
                 priority
               />
-              <span className="hidden text-sm font-semibold tracking-wide text-snow sm:block">
+              <span className="truncate text-sm font-semibold tracking-wide text-snow">
                 MoneyMatters <span className="text-mist">by ET</span>
               </span>
             </AppLink>
@@ -117,7 +117,7 @@ export default function Navbar() {
             animate={{ opacity: 1 }}
             exit={{ opacity: 0 }}
             transition={t}
-            className="fixed inset-0 z-[70] flex flex-col bg-void px-8 pt-28 md:hidden"
+            className="fixed inset-0 z-[70] flex flex-col bg-void px-6 pt-28 md:hidden"
           >
             <nav className="flex flex-1 flex-col justify-center gap-2" aria-label="Mobile">
               {NAV_LINKS.map((link, i) => (
@@ -130,7 +130,7 @@ export default function Navbar() {
                   <AppLink
                     href={link.href}
                     onClick={() => setOpen(false)}
-                    className={`block font-display text-5xl font-bold tracking-tighter2 ${
+                    className={`block font-display text-4xl font-bold tracking-tighter2 sm:text-5xl ${
                       pathMatches(pathname, link.href) ? "text-teal" : "text-snow"
                     }`}
                   >

@@ -22,10 +22,10 @@ export default function Hero() {
   });
 
   return (
-    <section className="relative min-h-[100svh] overflow-hidden bg-void">
+    <section className="relative min-h-[auto] overflow-hidden bg-void md:min-h-[100svh]">
       <FinancialBackground dense />
 
-      <div className="container-site relative z-10 grid min-h-[100svh] items-center gap-12 pb-20 pt-28 lg:grid-cols-[1.15fr_0.85fr]">
+      <div className="container-site relative z-10 grid items-center gap-10 pb-16 pt-28 md:min-h-[100svh] md:gap-12 md:pb-20 lg:grid-cols-[1.15fr_0.85fr]">
         <div>
           <motion.p
             initial={reduce ? false : { opacity: 0, y: 12 }}

@@ -1,19 +1,13 @@
 import AppLink from "@/components/AppLink";
-import ImageReveal from "./ImageReveal";
+import ClarityPanel from "./ClarityPanel";
 import SectionReveal from "./SectionReveal";
 import TextReveal from "./TextReveal";
 
 export default function AboutEquiTrust() {
   return (
-    <section className="relative overflow-hidden bg-void py-28 md:py-36">
-      <div className="container-site grid items-center gap-16 lg:grid-cols-2">
-        <ImageReveal
-          src="/images/about-teaser.jpg"
-          alt="EquiTrust research and education workspace"
-          className="aspect-[16/11] w-full rounded-2xl"
-          sizes="(max-width: 1024px) 100vw, 50vw"
-        />
-        <div>
+    <section className="relative overflow-hidden bg-void py-20 md:py-36">
+      <div className="container-site grid items-center gap-10 lg:grid-cols-2 lg:gap-16">
+        <div className="mx-auto w-full max-w-xl text-center lg:mx-0 lg:max-w-none lg:text-left">
           <p className="eyebrow">Who We Are</p>
           <TextReveal as="h2" className="display-md mt-4" lines={["ABOUT", "EQUITRUST"]} />
           <SectionReveal className="mt-8 space-y-4 text-mist">
@@ -33,6 +27,9 @@ export default function AboutEquiTrust() {
             About Us
             <span className="transition-transform duration-300 group-hover:translate-x-1">→</span>
           </AppLink>
+        </div>
+        <div className="mx-auto w-full max-w-xl lg:max-w-none">
+          <ClarityPanel />
         </div>
       </div>
     </section>

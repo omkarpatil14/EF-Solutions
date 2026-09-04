@@ -22,7 +22,7 @@ const team = [
 
 export default function TeamSection() {
   return (
-    <section className="relative bg-night py-28 md:py-36">
+    <section className="relative bg-night py-20 md:py-36">
       <div className="container-site">
         <SectionReveal className="max-w-3xl">
           <p className="eyebrow">Our Team</p>
@@ -44,7 +44,7 @@ export default function TeamSection() {
                   alt={member.alt}
                   fill
                   sizes="(max-width: 1024px) 100vw, 50vw"
-                  className="object-cover grayscale transition duration-700 ease-out group-hover:scale-105 group-hover:grayscale-0"
+                  className="object-cover object-top"
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-[#0B1624]/85 via-[#0B1624]/20 to-transparent opacity-80 transition duration-500 group-hover:opacity-90" />
                 <div className="absolute inset-x-0 bottom-0 translate-y-2 p-6 transition duration-500 group-hover:translate-y-0">

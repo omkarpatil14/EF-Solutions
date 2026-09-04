@@ -41,7 +41,7 @@ export default function HowWeWork() {
   }, []);
 
   return (
-    <section id="how-we-work" className="relative bg-night py-28 md:py-36">
+    <section id="how-we-work" className="relative bg-night py-20 md:py-36">
       <div className="container-site">
         <SectionReveal>
           <p className="eyebrow">How we work</p>
