@@ -1,7 +1,6 @@
 "use client";
 
 import Image from "next/image";
-import { StaggerContainer, StaggerItem } from "./SectionReveal";
 import SectionReveal from "./SectionReveal";
 
 const team = [
@@ -23,14 +22,12 @@ const team = [
 
 export default function TeamSection() {
   return (
-    <section className="bg-section-soft py-24 md:py-32">
+    <section className="relative bg-night py-28 md:py-36">
       <div className="container-site">
-        <SectionReveal className="mx-auto mb-16 max-w-3xl text-center">
-          <p className="section-label">Our Team</p>
-          <h2 className="heading-2 uppercase tracking-wide">
-            The People Behind EquiTrust
-          </h2>
-          <p className="body-copy mt-5">
+        <SectionReveal className="max-w-3xl">
+          <p className="eyebrow">Our Team</p>
+          <h2 className="display-md mt-4">The People Behind EquiTrust</h2>
+          <p className="body-copy mt-6">
             At EquiTrust, our strength lies in the experience, integrity, and
             research-driven mindset of our leadership. Our team combines market
             knowledge, analytical expertise, and a strong focus on transparency
@@ -38,28 +35,27 @@ export default function TeamSection() {
           </p>
         </SectionReveal>
 
-        <StaggerContainer className="mx-auto grid max-w-4xl gap-10 md:grid-cols-2">
+        <div className="mt-16 grid gap-8 md:grid-cols-2">
           {team.map((member) => (
-            <StaggerItem key={member.name}>
-              <article className="card-surface group h-full p-8 text-center">
-                <div className="relative mx-auto mb-6 h-40 w-40 overflow-hidden rounded-full ring-[6px] ring-teal-muted">
-                  <Image
-                    src={member.image}
-                    alt={member.alt}
-                    fill
-                    sizes="160px"
-                    className="object-cover transition-transform duration-500 ease-out group-hover:scale-110"
-                  />
+            <article key={member.name} className="group flex h-full flex-col">
+              <div className="relative aspect-[4/5] overflow-hidden">
+                <Image
+                  src={member.image}
+                  alt={member.alt}
+                  fill
+                  sizes="(max-width: 1024px) 100vw, 50vw"
+                  className="object-cover grayscale transition duration-700 ease-out group-hover:scale-105 group-hover:grayscale-0"
+                />
+                <div className="absolute inset-0 bg-gradient-to-t from-[#0B1624]/85 via-[#0B1624]/20 to-transparent opacity-80 transition duration-500 group-hover:opacity-90" />
+                <div className="absolute inset-x-0 bottom-0 translate-y-2 p-6 transition duration-500 group-hover:translate-y-0">
+                  <h3 className="font-display text-2xl font-semibold text-white">{member.name}</h3>
+                  <p className="mt-1 text-sm text-teal">{member.role}</p>
                 </div>
-                <h3 className="heading-3 text-2xl">{member.name}</h3>
-                <p className="mt-1 text-sm font-semibold text-teal">{member.role}</p>
-                <p className="mt-4 text-left text-[0.95rem] leading-relaxed text-ink-muted">
-                  {member.bio}
-                </p>
-              </article>
-            </StaggerItem>
+              </div>
+              <p className="mt-5 text-sm leading-relaxed text-mist">{member.bio}</p>
+            </article>
           ))}
-        </StaggerContainer>
+        </div>
       </div>
     </section>
   );

@@ -6,7 +6,7 @@ interface WaveDividerProps {
 
 export default function WaveDivider({
   className = "",
-  fill = "#F5F8FA",
+  fill = "#F4F1EA",
   flip = false,
 }: WaveDividerProps) {
   return (
@@ -15,14 +15,14 @@ export default function WaveDivider({
       aria-hidden
     >
       <svg
-        viewBox="0 0 1440 80"
+        viewBox="0 0 1440 96"
         fill="none"
         xmlns="http://www.w3.org/2000/svg"
-        className="block w-full"
+        className="block h-[56px] w-full sm:h-[72px] md:h-[88px]"
         preserveAspectRatio="none"
       >
         <path
-          d="M0 40C240 80 480 0 720 24C960 48 1200 80 1440 40V80H0V40Z"
+          d="M0 58C180 90 360 14 540 34C720 54 900 94 1080 70C1260 46 1350 22 1440 38V96H0V58Z"
           fill={fill}
         />
       </svg>

@@ -23,14 +23,14 @@ const offsets: Record<Direction, { x: number; y: number }> = {
   none: { x: 0, y: 0 },
 };
 
-const easeOut = [0.22, 1, 0.36, 1] as const;
+const easeOut = [0.16, 1, 0.3, 1] as const;
 
 export default function SectionReveal({
   children,
   className = "",
   direction = "up",
   delay = 0,
-  duration = 0.45,
+  duration = 0.8,
   once = true,
 }: SectionRevealProps) {
   const reduce = useReducedMotion();

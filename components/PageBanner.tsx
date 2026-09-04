@@ -1,6 +1,6 @@
 import Image from "next/image";
-import Link from "next/link";
-import WaveDivider from "./WaveDivider";
+import AppLink from "@/components/AppLink";
+import FinancialBackground from "./FinancialBackground";
 
 interface PageBannerProps {
   title: string;
@@ -16,37 +16,26 @@ export default function PageBanner({
   subtitle,
 }: PageBannerProps) {
   return (
-    <section className="relative overflow-hidden bg-navy-deep pb-20 pt-32 md:pb-24 md:pt-40">
+    <section className="relative overflow-hidden bg-void pb-20 pt-36 md:pb-28 md:pt-44">
+      <FinancialBackground />
       <Image
         src="/images/hero-bg.jpg"
-        alt="Dark navy banner background for MoneyMatters by ET"
+        alt=""
         fill
         priority
         sizes="100vw"
-        className="animate-ken-burns object-cover opacity-30"
+        className="object-cover opacity-[0.18]"
       />
-      <div className="absolute inset-0 bg-navy/80" />
-
-      <div className="container-site relative z-10 text-center">
-        <nav className="mb-4 text-sm text-cream/60" aria-label="Breadcrumb">
-          <Link href="/" prefetch className="transition-colors duration-200 hover:text-accent">
+      <div className="container-site relative z-10">
+        <nav className="mb-6 text-xs uppercase tracking-[0.22em] text-mute" aria-label="Breadcrumb">
+          <AppLink href="/" className="hover:text-teal">
             Home
-          </Link>
-          <span className="mx-2" aria-hidden>
-            &gt;
-          </span>
-          <span className="text-cream/90">
-            {breadcrumbHomeLabel ?? breadcrumbLabel}
-          </span>
+          </AppLink>
+          <span className="mx-2">/</span>
+          <span className="text-mist">{breadcrumbHomeLabel ?? breadcrumbLabel}</span>
         </nav>
-        <h1 className="heading-1 text-cream">{title}</h1>
-        {subtitle && (
-          <p className="body-copy mx-auto mt-4 max-w-xl !text-cream/70">{subtitle}</p>
-        )}
-      </div>
-
-      <div className="absolute inset-x-0 bottom-0 z-10">
-        <WaveDivider fill="#F4F1EA" />
+        <h1 className="display">{title}</h1>
+        {subtitle && <p className="body-copy mt-6 max-w-xl">{subtitle}</p>}
       </div>
     </section>
   );

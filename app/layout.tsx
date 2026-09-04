@@ -1,23 +1,21 @@
 import type { Metadata } from "next";
-import { Playfair_Display, Source_Sans_3 } from "next/font/google";
+import { Inter, Manrope } from "next/font/google";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
-import JsonLd from "@/components/JsonLd";
 import { SITE } from "@/lib/site";
 import "./globals.css";
 
-const display = Playfair_Display({
+const display = Manrope({
   subsets: ["latin"],
   variable: "--font-display",
   display: "swap",
-  weight: ["500", "600", "700"],
+  weight: ["500", "600", "700", "800"],
 });
 
-const sans = Source_Sans_3({
+const sans = Inter({
   subsets: ["latin"],
   variable: "--font-sans",
   display: "swap",
-  weight: ["400", "500", "600", "700"],
 });
 
 export const metadata: Metadata = {
@@ -37,9 +35,6 @@ export const metadata: Metadata = {
   ],
   authors: [{ name: SITE.name }],
   creator: SITE.name,
-  alternates: {
-    canonical: "/",
-  },
   openGraph: {
     type: "website",
     locale: "en_US",
@@ -59,8 +54,9 @@ export const metadata: Metadata = {
     follow: true,
   },
   icons: {
-    icon: "/images/logo.png",
+    icon: [{ url: "/images/logo.png", type: "image/png" }],
     apple: "/images/logo.png",
+    shortcut: "/images/logo.png",
   },
 };
 
@@ -71,16 +67,15 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en" className={`no-js ${display.variable} ${sans.variable}`}>
-      <body className="min-h-screen bg-surface font-sans text-ink antialiased">
+      <body className="min-h-screen bg-void font-sans text-snow antialiased">
         <script
           dangerouslySetInnerHTML={{
             __html: `document.documentElement.classList.remove('no-js')`,
           }}
         />
-        <JsonLd />
         <a
           href="#main-content"
-          className="sr-only focus:not-sr-only focus:absolute focus:left-4 focus:top-4 focus:z-[100] focus:rounded-md focus:bg-teal focus:px-4 focus:py-2 focus:text-cream"
+          className="sr-only focus:not-sr-only focus:absolute focus:left-4 focus:top-4 focus:z-[100] focus:rounded-xl focus:bg-teal focus:px-4 focus:py-2 focus:text-white"
         >
           Skip to content
         </a>
