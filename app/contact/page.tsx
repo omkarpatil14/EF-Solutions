@@ -28,10 +28,10 @@ export default function ContactPage() {
     <>
       <PageBanner title="Contact Us" breadcrumbLabel="Contact" />
 
-      <section className="relative overflow-hidden bg-void py-24 md:py-32">
+      <section className="relative overflow-hidden bg-void py-16 md:py-32">
         <FinancialBackground />
-        <div className="container-site relative z-10 grid gap-16 lg:grid-cols-2">
-          <div>
+        <div className="container-site relative z-10 grid gap-10 lg:grid-cols-2 lg:gap-16">
+          <div className="text-center lg:text-left">
             <p className="eyebrow">Contact</p>
             <h2 className="display mt-4">
               LET&apos;S TALK

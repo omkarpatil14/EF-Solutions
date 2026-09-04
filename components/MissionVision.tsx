@@ -4,14 +4,14 @@ import SectionReveal from "./SectionReveal";
 
 export default function MissionVision() {
   return (
-    <section className="relative grid min-h-[80vh] overflow-hidden md:grid-cols-2">
-      <article className="group relative flex flex-col justify-center border-snow/10 bg-steel px-8 py-24 md:border-r md:px-14 lg:px-20">
-        <div className="pointer-events-none absolute -left-4 top-10 font-display text-[20vw] font-bold text-teal/25 md:text-[9vw]">
+    <section className="relative grid overflow-hidden md:min-h-[80vh] md:grid-cols-2">
+      <article className="group relative flex flex-col justify-center bg-steel px-5 py-16 sm:px-8 md:border-r md:border-snow/10 md:px-14 md:py-24 lg:px-20">
+        <div className="pointer-events-none absolute -left-4 top-10 hidden font-display text-[9vw] font-bold text-teal/25 md:block">
           M
         </div>
         <p className="eyebrow">Our Mission</p>
         <h2 className="display-md mt-4">Our Mission</h2>
-        <SectionReveal className="mt-8 max-w-md space-y-4 text-mist">
+        <SectionReveal className="mt-8 w-full max-w-xl space-y-4 text-mist">
           <p>
             Our mission is to improve financial literacy by making investment
             education simple, transparent, and accessible. We aim to help
@@ -25,13 +25,13 @@ export default function MissionVision() {
           </p>
         </SectionReveal>
       </article>
-      <article className="relative flex flex-col justify-center bg-night px-8 py-24 md:px-14 lg:px-20">
-        <div className="pointer-events-none absolute -right-4 top-10 font-display text-[20vw] font-bold text-gold/25 md:text-[9vw]">
+      <article className="relative flex flex-col justify-center bg-night px-5 py-16 sm:px-8 md:px-14 md:py-24 lg:px-20">
+        <div className="pointer-events-none absolute -right-4 top-10 hidden font-display text-[9vw] font-bold text-gold/25 md:block">
           V
         </div>
         <p className="eyebrow !text-gold">Our Vision</p>
         <h2 className="display-md mt-4">Our Vision</h2>
-        <SectionReveal className="mt-8 max-w-md space-y-4 text-mist">
+        <SectionReveal className="mt-8 w-full max-w-xl space-y-4 text-mist">
           <p>
             Our vision is to become a trusted financial education platform
             that empowers individuals to navigate the investment landscape

@@ -29,7 +29,7 @@ export default function WhatWeOffer() {
   const [active, setActive] = useState(0);
 
   return (
-    <section className="relative bg-void py-28 md:py-36">
+    <section className="relative bg-void py-20 md:py-36">
       <div className="container-site">
         <p className="eyebrow">What we offer</p>
         <h2 className="display-md mt-4 max-w-3xl">What We Offer</h2>
@@ -44,7 +44,7 @@ export default function WhatWeOffer() {
                   onMouseEnter={() => setActive(i)}
                   onFocus={() => setActive(i)}
                   onClick={() => setActive(i)}
-                  className="group flex w-full items-start gap-6 py-7 text-left transition-colors duration-300 hover:bg-night md:gap-10"
+                  className="group flex w-full items-start gap-4 py-6 text-left transition-colors duration-300 hover:bg-night md:gap-10 md:py-7"
                 >
                   <span
                     className={`w-12 shrink-0 font-display text-sm font-semibold transition-colors duration-300 ${
@@ -55,8 +55,8 @@ export default function WhatWeOffer() {
                   </span>
                   <span className="flex-1">
                     <span
-                      className={`block font-display text-2xl font-semibold tracking-tight transition-transform duration-300 sm:text-3xl ${
-                        open ? "translate-x-2 text-snow" : "text-snow/80"
+                      className={`block font-display text-xl font-semibold tracking-tight transition-transform duration-300 sm:text-3xl ${
+                        open ? "md:translate-x-2 text-snow" : "text-snow/80"
                       }`}
                     >
                       {item.title}

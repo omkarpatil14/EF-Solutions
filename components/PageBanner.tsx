@@ -24,8 +24,9 @@ export default function PageBanner({
         fill
         priority
         sizes="100vw"
-        className="object-cover opacity-[0.18]"
+        className="object-cover opacity-[0.08] mix-blend-multiply"
       />
+      <div className="absolute inset-0 bg-void/50" />
       <div className="container-site relative z-10">
         <nav className="mb-6 text-xs uppercase tracking-[0.22em] text-mute" aria-label="Breadcrumb">
           <AppLink href="/" className="hover:text-teal">

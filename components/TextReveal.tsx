@@ -25,7 +25,7 @@ export default function TextReveal({
             className="block"
             initial={reduce ? false : { y: "100%" }}
             whileInView={{ y: 0 }}
-            viewport={{ once: true, amount: 0.4 }}
+            viewport={{ once: true, amount: 0.15 }}
             transition={{ duration: reduce ? 0 : 0.8, delay: reduce ? 0 : delay + i * 0.08, ease: easePremium }}
           >
             {line}

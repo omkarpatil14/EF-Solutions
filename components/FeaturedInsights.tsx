@@ -9,9 +9,9 @@ export default function FeaturedInsights() {
   const reduce = useReducedMotion();
 
   return (
-    <section className="relative overflow-hidden bg-night py-28 md:py-36">
-      <div className="container-site grid items-center gap-16 lg:grid-cols-2">
-        <h2 className="display">
+    <section className="relative overflow-hidden bg-night py-20 md:py-36">
+      <div className="container-site grid items-center gap-10 lg:grid-cols-2 lg:gap-16">
+        <h2 className="display text-center lg:text-left">
           KNOW
           <br />
           BEFORE
@@ -36,7 +36,7 @@ export default function FeaturedInsights() {
           {principles.map((p, i) => (
             <motion.p
               key={p}
-              className="absolute text-xs font-semibold tracking-[0.28em] text-snow"
+              className="absolute text-[10px] font-semibold tracking-[0.18em] text-snow sm:text-xs sm:tracking-[0.28em]"
               style={
                 i === 0
                   ? { top: "4%", left: "50%", transform: "translateX(-50%)" }

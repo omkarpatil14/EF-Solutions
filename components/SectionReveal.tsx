@@ -54,7 +54,7 @@ export default function SectionReveal({
       data-reveal
       initial="hidden"
       whileInView="visible"
-      viewport={{ once, amount: 0.2 }}
+      viewport={{ once, amount: 0.12 }}
       variants={variants}
     >
       {children}

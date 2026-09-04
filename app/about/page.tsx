@@ -28,8 +28,8 @@ export default function AboutPage() {
     <>
       <PageBanner title="About us" breadcrumbHomeLabel="Home" />
 
-      <section className="relative overflow-hidden bg-night py-28 md:py-36">
-        <p className="pointer-events-none absolute right-0 top-10 font-display text-[22vw] font-bold leading-none text-teal/20">
+      <section className="relative overflow-hidden bg-night py-20 md:py-36">
+        <p className="pointer-events-none absolute right-0 top-10 hidden font-display text-[22vw] font-bold leading-none text-teal/20 md:block">
           01
         </p>
         <div className="container-site max-w-3xl">
