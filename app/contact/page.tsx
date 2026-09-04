@@ -3,6 +3,7 @@ import { SITE } from "@/lib/site";
 import PageBanner from "@/components/PageBanner";
 import ContactForm from "@/components/ContactForm";
 import SectionReveal from "@/components/SectionReveal";
+import FinancialBackground from "@/components/FinancialBackground";
 
 export const metadata: Metadata = {
   title: "Contact",
@@ -27,10 +28,21 @@ export default function ContactPage() {
     <>
       <PageBanner title="Contact Us" breadcrumbLabel="Contact" />
 
-      <section className="bg-surface py-24 md:py-32">
-        <div className="container-site mx-auto max-w-2xl">
+      <section className="relative overflow-hidden bg-void py-24 md:py-32">
+        <FinancialBackground />
+        <div className="container-site relative z-10 grid gap-16 lg:grid-cols-2">
+          <div>
+            <p className="eyebrow">Contact</p>
+            <h2 className="display mt-4">
+              LET&apos;S TALK
+              <br />
+              ABOUT
+              <br />
+              <span className="text-teal">MONEY.</span>
+            </h2>
+          </div>
           <SectionReveal>
-            <div className="card-surface p-6 sm:p-10">
+            <div className="rounded-3xl border-2 border-teal/25 bg-panel p-6 shadow-[0_24px_60px_rgba(6,122,114,0.14)] sm:p-10">
               <ContactForm />
             </div>
           </SectionReveal>

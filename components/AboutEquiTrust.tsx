@@ -1,28 +1,22 @@
-import Image from "next/image";
-import Link from "next/link";
+import AppLink from "@/components/AppLink";
+import ImageReveal from "./ImageReveal";
 import SectionReveal from "./SectionReveal";
-import WaveDivider from "./WaveDivider";
+import TextReveal from "./TextReveal";
 
 export default function AboutEquiTrust() {
   return (
-    <section className="relative bg-surface py-24 md:py-32">
-      <div className="container-site grid items-center gap-14 lg:grid-cols-2 lg:gap-20">
-        <SectionReveal direction="left">
-          <div className="img-frame relative aspect-[4/3]">
-            <Image
-              src="/images/about-teaser.jpg"
-              alt="EquiTrust research and education workspace"
-              fill
-              sizes="(max-width: 1024px) 100vw, 50vw"
-              className="object-cover"
-            />
-          </div>
-        </SectionReveal>
-
-        <SectionReveal direction="right" delay={0.08}>
-          <p className="section-label">Who We Are</p>
-          <h2 className="heading-2 uppercase tracking-wide">About EquiTrust</h2>
-          <div className="mt-6 space-y-4 text-base leading-relaxed text-ink-muted sm:text-lg">
+    <section className="relative overflow-hidden bg-void py-28 md:py-36">
+      <div className="container-site grid items-center gap-16 lg:grid-cols-2">
+        <ImageReveal
+          src="/images/about-teaser.jpg"
+          alt="EquiTrust research and education workspace"
+          className="aspect-[16/11] w-full rounded-2xl"
+          sizes="(max-width: 1024px) 100vw, 50vw"
+        />
+        <div>
+          <p className="eyebrow">Who We Are</p>
+          <TextReveal as="h2" className="display-md mt-4" lines={["ABOUT", "EQUITRUST"]} />
+          <SectionReveal className="mt-8 space-y-4 text-mist">
             <p>
               EquiTrust is a financial education and research-driven platform
               focused on building trust, transparency, and informed
@@ -34,14 +28,12 @@ export default function AboutEquiTrust() {
               approach is designed to help individuals understand investments,
               risk dynamics, and decision frameworks before committing capital.
             </p>
-          </div>
-          <Link href="/about" prefetch className="btn-primary mt-8">
+          </SectionReveal>
+          <AppLink href="/about" className="group btn-primary mt-10">
             About Us
-          </Link>
-        </SectionReveal>
-      </div>
-      <div className="absolute inset-x-0 bottom-0 translate-y-[1px]">
-        <WaveDivider fill="#EEF4F3" />
+            <span className="transition-transform duration-300 group-hover:translate-x-1">→</span>
+          </AppLink>
+        </div>
       </div>
     </section>
   );

@@ -93,7 +93,7 @@ export default function ContactForm() {
 
       <div className="grid gap-5 sm:grid-cols-2">
         <div>
-          <label htmlFor="name" className="mb-1.5 block text-sm font-semibold text-navy">
+          <label htmlFor="name" className="mb-1.5 block text-xs font-semibold uppercase tracking-[0.18em] text-mist">
             Name
           </label>
           <input
@@ -107,7 +107,7 @@ export default function ContactForm() {
           {errors.name && <p className="mt-1 text-xs text-red-600">{errors.name}</p>}
         </div>
         <div>
-          <label htmlFor="email" className="mb-1.5 block text-sm font-semibold text-navy">
+          <label htmlFor="email" className="mb-1.5 block text-xs font-semibold uppercase tracking-[0.18em] text-mist">
             Email
           </label>
           <input
@@ -124,7 +124,7 @@ export default function ContactForm() {
       </div>
 
       <div>
-        <label htmlFor="subject" className="mb-1.5 block text-sm font-semibold text-navy">
+        <label htmlFor="subject" className="mb-1.5 block text-xs font-semibold uppercase tracking-[0.18em] text-mist">
           Subject
         </label>
         <input
@@ -141,7 +141,7 @@ export default function ContactForm() {
       </div>
 
       <div>
-        <label htmlFor="message" className="mb-1.5 block text-sm font-semibold text-navy">
+        <label htmlFor="message" className="mb-1.5 block text-xs font-semibold uppercase tracking-[0.18em] text-mist">
           Message
         </label>
         <textarea
@@ -161,7 +161,7 @@ export default function ContactForm() {
       <button
         type="submit"
         disabled={status === "pending"}
-        className="btn-primary w-full disabled:cursor-not-allowed disabled:opacity-70 sm:w-auto"
+        className="group btn-primary w-full disabled:cursor-not-allowed disabled:opacity-70 sm:w-auto"
       >
         {status === "pending" ? "Sending…" : "Send message"}
       </button>
@@ -173,7 +173,7 @@ export default function ContactForm() {
             initial={{ opacity: 0, y: 8 }}
             animate={{ opacity: 1, y: 0 }}
             exit={{ opacity: 0 }}
-            className="flex items-center gap-3 rounded-xl border border-teal/30 bg-teal-muted px-4 py-3 text-sm text-teal"
+            className="flex items-center gap-3 border border-teal/30 bg-teal/10 px-4 py-3 text-sm text-teal"
           >
             <svg className="h-5 w-5 shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
               <path strokeLinecap="round" strokeLinejoin="round" d="M4.5 12.75l6 6 9-13.5" />
@@ -187,7 +187,7 @@ export default function ContactForm() {
             initial={{ opacity: 0, y: 8 }}
             animate={{ opacity: 1, y: 0 }}
             exit={{ opacity: 0 }}
-            className="rounded-xl border border-red-200 bg-red-50 px-4 py-3 text-sm text-red-700"
+            className="border border-red-200 bg-red-50 px-4 py-3 text-sm text-red-700"
           >
             {serverError || "Something went wrong. Please try again."}
           </motion.div>

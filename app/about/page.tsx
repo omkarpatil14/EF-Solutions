@@ -28,12 +28,15 @@ export default function AboutPage() {
     <>
       <PageBanner title="About us" breadcrumbHomeLabel="Home" />
 
-      <section className="bg-surface py-24 md:py-32">
+      <section className="relative overflow-hidden bg-night py-28 md:py-36">
+        <p className="pointer-events-none absolute right-0 top-10 font-display text-[22vw] font-bold leading-none text-teal/20">
+          01
+        </p>
         <div className="container-site max-w-3xl">
           <SectionReveal>
-            <p className="section-label">About MoneyMatters By ET</p>
-            <h2 className="heading-2 uppercase tracking-wide">About Us</h2>
-            <div className="mt-6 space-y-4 text-base leading-relaxed text-ink-muted sm:text-lg">
+            <p className="eyebrow">About MoneyMatters By ET</p>
+            <h2 className="display-md mt-4">About Us</h2>
+            <div className="mt-8 space-y-4 text-mist">
               <p>
                 MoneyMatters by ET was created with a clear purpose—to help
                 people understand financial investments before committing their

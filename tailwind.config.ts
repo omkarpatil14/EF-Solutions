@@ -9,62 +9,55 @@ const config: Config = {
   theme: {
     extend: {
       colors: {
-        navy: {
-          DEFAULT: "#0B2438",
-          soft: "#16344C",
-          deep: "#071825",
-        },
+        void: "#E7F1EE",
+        night: "#D4E8E2",
+        panel: "#F3FAF7",
+        steel: "#C3DDD6",
         teal: {
-          DEFAULT: "#0E7C6B",
-          light: "#149C88",
-          muted: "#D7EFEA",
+          DEFAULT: "#067A72",
+          dim: "rgba(6, 122, 114, 0.18)",
         },
-        accent: {
-          DEFAULT: "#E07A3A",
-          soft: "#F0A56A",
-        },
-        cream: "#F4F1EA",
-        surface: {
-          DEFAULT: "#F4F1EA",
-          card: "#FFFcf7",
-          mist: "#E4DFD4",
-          tint: "#E8F1EF",
-        },
-        ink: {
-          DEFAULT: "#1C2A36",
-          muted: "#536271",
-          light: "#7A8894",
-        },
+        signal: "#1D5FE0",
+        gold: "#C06A0A",
+        snow: "#08131C",
+        mist: "#2E4250",
+        mute: "#456070",
       },
       fontFamily: {
-        display: ["var(--font-display)", "Georgia", "serif"],
+        display: ["var(--font-display)", "system-ui", "sans-serif"],
         sans: ["var(--font-sans)", "system-ui", "sans-serif"],
       },
-      fontSize: {
-        "body-lg": ["1.125rem", { lineHeight: "1.75" }],
-      },
-      boxShadow: {
-        card: "0 10px 30px -16px rgba(11, 36, 56, 0.22)",
-        "card-hover": "0 22px 44px -18px rgba(11, 36, 56, 0.32)",
-        nav: "0 8px 28px -16px rgba(7, 24, 37, 0.45)",
+      letterSpacing: {
+        tighter2: "-0.04em",
       },
       backgroundImage: {
-        "hero-mesh":
-          "radial-gradient(ellipse 80% 60% at 18% 40%, rgba(14, 124, 107, 0.38), transparent), radial-gradient(ellipse 55% 45% at 82% 18%, rgba(224, 122, 58, 0.18), transparent), linear-gradient(160deg, #071825 0%, #0B2438 50%, #0E3D4A 100%)",
-        "section-soft":
-          "linear-gradient(180deg, #EEF4F3 0%, #E4EDE9 100%)",
-      },
-      transitionDuration: {
-        DEFAULT: "200ms",
-      },
-      animation: {
-        "ken-burns": "kenBurns 32s ease-in-out infinite alternate",
+        "glow-a":
+          "radial-gradient(circle at 18% 18%, rgba(6, 122, 114, 0.38), transparent 46%)",
+        "glow-b":
+          "radial-gradient(circle at 82% 8%, rgba(29, 95, 224, 0.22), transparent 40%)",
       },
       keyframes: {
-        kenBurns: {
-          "0%": { transform: "scale(1)" },
-          "100%": { transform: "scale(1.06)" },
+        gridDrift: {
+          "0%": { transform: "translateY(0)" },
+          "100%": { transform: "translateY(40px)" },
         },
+        glowPulse: {
+          "0%, 100%": { opacity: "0.45" },
+          "50%": { opacity: "0.85" },
+        },
+        dash: {
+          to: { strokeDashoffset: "-24" },
+        },
+        floatY: {
+          "0%, 100%": { transform: "translateY(0)" },
+          "50%": { transform: "translateY(-10px)" },
+        },
+      },
+      animation: {
+        gridDrift: "gridDrift 18s linear infinite",
+        glowPulse: "glowPulse 8s ease-in-out infinite",
+        dash: "dash 18s linear infinite",
+        floatY: "floatY 9s ease-in-out infinite",
       },
     },
   },
